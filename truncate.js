@@ -15,8 +15,8 @@
 
 
 // * Place "use strict" at the top of your file to invoke strict mode
-// * Create an additional function called `truncateCharacters` and repeat this experiment truncating by characters instead of words
-// * Modify your Function so that it can be called without the `numWords` argument (if no `numWords` is supplied it should use a default number of words to truncate)
+// * Create an additional function called `truncateCharacters` and repeat this experiment truncating by characters instead of words 
+// * Modify your Function so that it can be called without the `numWords`  argument (if no `numWords` is supplied it should use a default number of words to truncate)
 // * Modify your Function so that instead of returning a single String value it returns an Object that contains the following information:
 //   * `originalText` (original text that was sent to the function)
 //   * `wordCount` (count of the number of words in original text)
@@ -29,14 +29,10 @@
 // are experimenting further or pursuing stretch goals.
 'use strict'
 function truncatewords(longText, numWords) {
-//var shortText = truncateWords(originalText, wordLimit);
-
  if (typeof numWords === 'undefined') {
    numWords = 7;} 
 // 1. Use the split() function to split the String into an Array
 var splittext= longText.split(" ");
-
-
 // 2. Use the length attribute to find the number of words in the Array
 // 3. Determine how many words should be removed from the String
 // 4. Remove those words from the Array
@@ -55,12 +51,8 @@ console.log('shortText: ' + splittext.join(" "));
 truncatewords("There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.")
 
 function truncateCharacters(longText, numCharacters) {
-//var shortText = truncateWords(originalText, wordLimit);
-
 // 1. Use the split() function to split the String into an Array
 var splitTextChar= longText.split("");
-
-
 // 2. Use the length attribute to find the number of words in the Array
 // 3. Determine how many words should be removed from the String
 // 4. Remove those words from the Array
@@ -68,7 +60,6 @@ var splitTextChar= longText.split("");
 splitTextChar.splice(numCharacters, 
                  (splitTextChar.length-numCharacters) //splittext.length determines length of array Logic determines how many words to remove from string
                  ,'...'); //inserts elipses
-
 // 6. Use the join() function to convert the Array back into a String
 // 7. Return the truncated String from the Function
 console.log('originalText: ' + longText);
@@ -77,6 +68,7 @@ console.log('shortText: ' + splitTextChar.join(""));
 }
 truncateCharacters("There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.",8)
 
+// Strech goals
 function truncateObject(longText, numWords) {
 //var shortText = truncateWords(originalText, wordLimit);
 
@@ -109,9 +101,6 @@ shortText: 'shortText: ' + splittext.join(" ")
 };
   
  console.log(obj)
-// console.log('originalText: ' + longText);
-// //console.log('shortText: ' + shortText);
-// console.log('shortText: ' + splittext.join(" "));
 }
 
 truncateObject("There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.")
